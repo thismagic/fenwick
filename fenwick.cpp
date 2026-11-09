@@ -19,9 +19,6 @@ struct fenwick {
     }
  
     int get(int l,int r) {
-        if(l > r) {
-            return sum(r) + sum(tree.size() - 1) - (l ? sum(l - 1) : 0);
-        }
         return sum(r) - (l ? sum(l - 1) : 0);
     }
 };
